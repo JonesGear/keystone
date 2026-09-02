@@ -26,6 +26,10 @@ Dated 2026-09-01. Replaces: nothing.
   Reason: a school-managed browser profile filtered every cross-origin request and every page waited seconds on Google Fonts and a CDN before first paint; the student's own browser is that profile.
   Silent default: fetch the exact version once, verify against the published hash, commit the files; fonts as latin + latin-ext woff2 with a local @font-face stylesheet linked before base.css.
   Check: `python scripts/check_templates.py --sri` (any external script or stylesheet other than the analytics URL fails).
+- **Static assets are referenced through a `static_url()` helper that appends a content hash, and served with a one-year immutable Cache-Control when versioned; vendored and font directories are immutable by path (upgrading one means a new path). Unversioned static requests revalidate.**
+  Reason: with no Cache-Control the browser guessed freshness from file age and revalidated every asset on every navigation right after a deploy; behind a school filter each round trip delayed first paint.
+  Silent default: `{{ static_url('css/base.css') }}` in templates; `CachedStaticFiles` mount.
+  Check: `pytest tests/test_static_cache.py` (rendered pages reference no bare /static/ URL; versioned and vendored responses carry immutable).
 - **Wide content scrolls inside its container; the body never scrolls horizontally at 375px.**
   Reason: phone browsers must not break even when desktop is primary.
   Silent default: overflow-x auto on tables and code.
