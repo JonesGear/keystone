@@ -31,4 +31,15 @@ Dated YYYY-MM-DD. Replaces: <what it superseded, or "nothing">.
 
 ## Index
 
-(empty on 2026-09-01; the first boxes come from the tutor respec)
+- web-fastapi-jinja.md — Web app: FastAPI + Jinja, no build step
+- postgres-alembic.md — Database: PostgreSQL + Alembic
+- docker-compose-stack.md — Docker stack: prod compose + dev override
+- claude-api.md — Claude API: one module, evals, replay
+- background-jobs.md — Job rows and the worker
+- auth-oauth-acl.md — Google OAuth, allow-list, sessions, CSRF
+- file-storage.md — Storage behind one module
+- frontend-css-js.md — Tokens, CSS layout, static JS, CDN, CSP
+- context-budget.md — File size as implementer context
+- config-env.md — Configuration and secrets
+- tests-fastapi-postgres.md — Test harness on a real database
+- git-commits.md — Commits and pushes
