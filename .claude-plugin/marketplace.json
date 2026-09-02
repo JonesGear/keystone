@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "keystone",
+  "version": "0.1.0",
+  "description": "Keystone: decision boxes, one spec template, and a loop standard for finishing projects with Claude Code.",
+  "owner": {
+    "name": "KC Jones"
+  },
+  "plugins": [
+    {
+      "name": "keystone",
+      "description": "Decision boxes (one page per concern), a spec template that ends in a checklist with a runnable check per item, and a loop standard that gates every commit.",
+      "version": "0.1.0",
+      "source": "./plugins/keystone",
+      "category": "development"
+    }
+  ]
+}

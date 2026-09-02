@@ -1,0 +1,10 @@
+{
+  "name": "keystone",
+  "version": "0.1.0",
+  "description": "Decision boxes, one spec template, and a loop standard. Holds only decisions and checks; everything else is adopted from existing tools.",
+  "author": {
+    "name": "KC Jones"
+  },
+  "repository": "https://github.com/JonesGear/keystone",
+  "keywords": ["spec-driven", "closed-loop", "bento", "standards"]
+}
